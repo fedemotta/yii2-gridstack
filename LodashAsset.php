@@ -9,24 +9,14 @@ namespace fedemotta\gridstack;
 use yii\web\AssetBundle;
 
 /**
- * Asset for the Gridstack JQuery plugin
+ * Asset for the lodash library
  * @author Federico Nicolás Motta <fedemotta@gmail.com>
  */
-class GridstackAsset extends AssetBundle 
+class LodashAsset extends AssetBundle 
 {
-    public $sourcePath = '@bower/gridstack'; 
-
-    public $css = [
-        'dist/gridstack.css',
-    ];
+    public $sourcePath = '@bower/lodash'; 
 
     public $js = [
-        'dist/gridstack.js',
-    ];
-
-    public $depends = [
-        'yii\web\JqueryAsset',
-        'yii\jui\JuiAsset',
-        'fedemotta\gridstack\LodashAsset',
+        'lodash.js',
     ];
 }
