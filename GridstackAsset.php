@@ -14,14 +14,14 @@ use yii\web\AssetBundle;
  */
 class GridstackAsset extends AssetBundle 
 {
-    public $sourcePath = '@bower/gridstack.js'; 
+    public $sourcePath = '@bower/gridstack'; 
 
     public $css = [
-        'dist/gridstack.css',
+        'src/gridstack.css',
     ];
 
     public $js = [
-        'dist/gridstack.js',
+        'src/gridstack.js',
     ];
 
     public $depends = [
