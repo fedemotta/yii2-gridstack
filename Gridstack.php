@@ -29,16 +29,6 @@ class Gridstack extends Widget
     public $tag = 'div';
     
     /**
-     * @var array the HTML attributes for the widget sub container tag.
-     */
-    public $subOptions = [];
-    
-    /**
-     * @var string the sub container tag
-     */
-    public $subTag = 'ul';
-    
-    /**
      * @var array the options for the Gridstack widget.
      */
     public $clientOptions = [];
@@ -51,26 +41,23 @@ class Gridstack extends Widget
     /**
      * Generates a gridstack start tag.
      * @param array $options
-     * @param array $subOptions
      * @param string $tag
-     * @param string $subTag
-     * @return string the concatenated generated tags.
+     * @return string the generated tag.
      * @see endContainer()
      */
-    public static function beginContainer($options=[],$subOptions=[], $tag='div',$subTag='ul')
+    public static function beginContainer($options=[], $tag='div',$subTag='ul')
     {
-        return Html::beginTag($tag,$options).Html::beginTag($subTag,$subOptions);
+        return Html::beginTag($tag,$options);
     }
     /**
      * Generates a gridstack end tag.
      * @param string $tag
-     * @param string $subTag
-     * @return string the concatenated generated tags.
+     * @return string the generated tag.
      * @see beginContainer()
      */
-    public static function endContainer($tag='div',$subTag='ul')
+    public static function endContainer($tag='div')
     {
-        return Html::endTag($subTag).Html::endTag($tag);
+        return Html::endTag($tag);
     
     }
     /**
@@ -82,7 +69,7 @@ class Gridstack extends Widget
      * @return string the generated tag
      * @see endWidget()
      */
-    public function beginWidget($options=[],$tag='li')
+    public function beginWidget($options=[],$tag='div')
     {
         $widget = Html::beginTag($tag,$options);
         $this->_widgets[] = $widget;
@@ -95,7 +82,7 @@ class Gridstack extends Widget
      * @return string the generated tag
      * @see beginWidget()
      */
-    public function endWidget($tag='li')
+    public function endWidget($tag='div')
     {
         $widget = array_pop($this->_widgets);
         if (!is_null($widget)) {
@@ -114,9 +101,9 @@ class Gridstack extends Widget
         if (!isset($this->options['id'])) {
             $this->options['id'] = $this->getId();
         }
-        echo self::beginContainer($this->options,$this->subOptions,$this->tag, $this->subTag);
+        echo self::beginContainer($this->options,$this->tag);
     }
-     /**
+    /**
      * Runs the widget.
      * This registers the necessary javascript code and renders the gridstack close tag.
      * @throws InvalidCallException if `beginWidget()` and `endWidget()` calls are not matching
@@ -128,10 +115,9 @@ class Gridstack extends Widget
         }
         $id = $this->options['id'];
         $view = $this->getView();
-        $namespace =  ["namespace" => "#$id"];
-        $options = !empty($this->clientOptions) ? Json::encode(array_merge($namespace,$this->clientOptions)) : Json::encode($namespace);
+        $options = !empty($this->clientOptions) ? Json::encode($this->clientOptions) : Json::encode([]);
         GridstackAsset::register($view);
-        $view->registerJs("jQuery('#$id $this->subTag').gridstack($options);");
-        echo self::endContainer($this->tag,$this->subTag);
+        $view->registerJs("jQuery('#$id').gridstack($options);");
+        echo self::endContainer($this->tag);
     }
 }
