@@ -1,0 +1,35 @@
+{
+    "name": "fedemotta/yii2-gridstack",
+    "description": "Gridstack.js widget for Yii2",
+    "type": "yii2-extension",
+    "minimum-stability": "stable",
+    "keywords": ["yii2","extension","gridstack","gridstack.js","drag-and-drop","multi-column","jQuery","grid","plugin"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/fedemotta/yii2-gridstack/issues?state=open",
+        "source": "https://github.com/fedemotta/yii2-gridstack"
+    },
+    "authors": [
+        {
+            "name": "Federico Nicolás Motta",
+            "email": "fedemotta@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "bower-asset/lodash":">= 3.5.0",
+        "bower-asset/jquery":">= 1.11.0",
+        "bower-asset/jquery-ui":">= 1.11.0",
+        "bower-asset/gridstack":"*"
+    },
+    "autoload": {
+        "psr-4": {
+            "fedemotta\\gridstack\\": ""
+        }
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}
