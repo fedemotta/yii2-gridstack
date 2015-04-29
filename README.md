@@ -39,11 +39,11 @@ $gridstack = Gridstack::begin([
     ],
 ]);?>
 
-<?= $gridstack->beginWidget(['class'=>'grid-stack-item','data-gs-width'=>"4",'data-gs-height'=>"2",'data-gs-x'=>"0",'data-gs-y'=>"0",]);?>
+<?=$gridstack->beginWidget(['class'=>'grid-stack-item','data-gs-width'=>"4",'data-gs-height'=>"2",'data-gs-x'=>"0",'data-gs-y'=>"0",]);?>
     <div class="grid-stack-item-content"></div>
 <?=$gridstack->endWidget();?>
 
-<?= $gridstack->beginWidget(['class'=>'grid-stack-item','data-gs-width'=>"4",'data-gs-height'=>"4",'data-gs-x'=>"4",'data-gs-y'=>"0",]);?>
+<?=$gridstack->beginWidget(['class'=>'grid-stack-item','data-gs-width'=>"4",'data-gs-height'=>"4",'data-gs-x'=>"4",'data-gs-y'=>"0",]);?>
     <div class="grid-stack-item-content"></div>
 <?=$gridstack->endWidget();?>
 
