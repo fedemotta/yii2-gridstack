@@ -17,11 +17,11 @@ class GridstackAsset extends AssetBundle
     public $sourcePath = '@bower/gridstack'; 
 
     public $css = [
-        'src/gridstack.css',
+        'dist/gridstack.css',
     ];
 
     public $js = [
-        'src/gridstack.js',
+        'dist/gridstack.js',
     ];
 
     public $depends = [
