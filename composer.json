@@ -3,7 +3,7 @@
     "description": "Gridstack.js widget for Yii2",
     "type": "yii2-extension",
     "minimum-stability": "stable",
-    "keywords": ["yii2","extension","gridstack","gridstack.js","drag-and-drop","multi-column","jQuery","grid","plugin"],
+    "keywords": ["yii2","extension","gridstack","gridstack.js","drag-and-drop","multi-column","jQuery","grid","plugin","responsive"],
     "license": "MIT",
     "support": {
         "issues": "https://github.com/fedemotta/yii2-gridstack/issues?state=open",
