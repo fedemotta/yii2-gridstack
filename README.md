@@ -2,6 +2,8 @@ Gridstack.js widget for Yii2
 ===========================
 This extension provides the [Gridstack.js](https://github.com/troolee/gridstack.js) integration for the Yii2 framework.
 
+[![Latest Stable Version](https://poser.pugx.org/fedemotta/yii2-gridstack/v/stable)](https://packagist.org/packages/fedemotta/yii2-gridstack) [![Total Downloads](https://poser.pugx.org/fedemotta/yii2-gridstack/downloads)](https://packagist.org/packages/fedemotta/yii2-gridstack) [![Latest Unstable Version](https://poser.pugx.org/fedemotta/yii2-gridstack/v/unstable)](https://packagist.org/packages/fedemotta/yii2-gridstack) [![License](https://poser.pugx.org/fedemotta/yii2-gridstack/license)](https://packagist.org/packages/fedemotta/yii2-gridstack)
+
 Installation
 ------------
 
