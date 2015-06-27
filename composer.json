@@ -20,7 +20,7 @@
         "bower-asset/lodash":">= 3.5.0",
         "bower-asset/jquery":">= 1.11.0",
         "bower-asset/jquery-ui":">= 1.11.0",
-        "bower-asset/gridstack":"*"
+        "bower-asset/gridstack":"@dev"
     },
     "autoload": {
         "psr-4": {
