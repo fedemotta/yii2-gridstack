@@ -36,8 +36,8 @@ use fedemotta\gridstack\Gridstack;
 $gridstack = Gridstack::begin([
     'options'=>['class'=>'grid-stack'],
     'clientOptions'=>[
-        'cell_height'=> 80,
-        'vertical_margin'=> 10,
+        'cellHeight'=> 80,
+        'verticalMargin'=> 10,
     ],
 ]);?>
 
