@@ -14,19 +14,18 @@ use yii\web\AssetBundle;
  */
 class GridstackAsset extends AssetBundle 
 {
-    public $sourcePath = '@bower/gridstack'; 
-
-    public $css = [
-        'dist/gridstack.css',
-    ];
-
-    public $js = [
-        'dist/gridstack.js',
-    ];
+    public $sourcePath = '@bower/gridstack';
 
     public $depends = [
         'yii\web\JqueryAsset',
         'yii\jui\JuiAsset',
         'fedemotta\gridstack\LodashAsset',
     ];
+
+    public function init()
+    {
+        $this->css = [YII_ENV_PROD ? 'dist/gridstack.min.css' : 'dist/gridstack.css'];
+        $this->js = [YII_ENV_PROD ? 'dist/gridstack.min.js' : 'dist/gridstack.js'];
+        parent::init();
+    }
 }
